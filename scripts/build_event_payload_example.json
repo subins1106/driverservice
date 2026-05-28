@@ -1,0 +1,13 @@
+{
+  "userId": "{{uid}}",
+  "sessionId": "{{sessionId}}",
+  "scenarioId": "unplanned-pedestrian",
+  "t": 18340,
+  "type": "reaction",
+  "data": {
+    "objectType": "pedestrian",
+    "distanceM": 7.2,
+    "reactionMs": 870
+  },
+  "createdAt": "{{timestamp}}"
+}

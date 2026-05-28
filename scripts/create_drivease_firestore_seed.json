@@ -1,0 +1,213 @@
+{
+  "writes": [
+    {
+      "update": {
+        "name": "projects/drivease-2c384/databases/(default)/documents/appMetadata/config",
+        "fields": {
+          "appName": {"stringValue": "DrivEase"},
+          "projectAlias": {"stringValue": "drivease-2c384"},
+          "targetVehicle": {"stringValue": "compact-sedan"},
+          "sensors": {"arrayValue": {"values": [{"stringValue": "Gyroscope"}, {"stringValue": "Touch"}, {"stringValue": "Accelerometer"}, {"stringValue": "Speedometer"}]}},
+          "platform": {"stringValue": "iOS Android"},
+          "version": {"stringValue": "1.1.0"},
+          "isPilot": {"booleanValue": true}
+        }
+      }
+    },
+    {
+      "update": {
+        "name": "projects/drivease-2c384/databases/(default)/documents/guideProfiles/beginner",
+        "fields": {
+          "level": {"stringValue": "beginner"},
+          "name": {"stringValue": "초급"},
+          "handleTimingGuide": {"booleanValue": true},
+          "bodyRangeVisualization": {"booleanValue": true},
+          "reverseGuideText": {"booleanValue": true},
+          "steeringAngleMeter": {"booleanValue": true},
+          "distanceWarning": {"stringValue": "green:200,orange:50,red:20"},
+          "notes": {"stringValue": "안전한 조작 학습 단계. 모든 가이드 표시를 기본 제공."}
+        }
+      }
+    },
+    {
+      "update": {
+        "name": "projects/drivease-2c384/databases/(default)/documents/guideProfiles/intermediate",
+        "fields": {
+          "level": {"stringValue": "intermediate"},
+          "name": {"stringValue": "중급"},
+          "handleTimingGuide": {"booleanValue": true},
+          "bodyRangeVisualization": {"booleanValue": true},
+          "reverseGuideText": {"booleanValue": false},
+          "steeringAngleMeter": {"booleanValue": true},
+          "distanceWarning": {"stringValue": "green:200,orange:50,red:20"},
+          "notes": {"stringValue": "핸들 타이밍 안내는 희미 처리, 주행 난이도는 상승."}
+        }
+      }
+    },
+    {
+      "update": {
+        "name": "projects/drivease-2c384/databases/(default)/documents/guideProfiles/advanced",
+        "fields": {
+          "level": {"stringValue": "advanced"},
+          "name": {"stringValue": "고급"},
+          "handleTimingGuide": {"booleanValue": false},
+          "bodyRangeVisualization": {"booleanValue": true},
+          "reverseGuideText": {"booleanValue": false},
+          "steeringAngleMeter": {"booleanValue": true},
+          "distanceWarning": {"stringValue": "green:220,orange:80,red:30"},
+          "notes": {"stringValue": "실전형 돌발 대처 연습용. 최소 가이드만 노출."}
+        }
+      }
+    },
+    {
+      "update": {
+        "name": "projects/drivease-2c384/databases/(default)/documents/scenarios/unplanned-pedestrian",
+        "fields": {
+          "scenarioId": {"stringValue": "unplanned-pedestrian"},
+          "name": {"stringValue": "무단횡단"},
+          "difficulty": {"stringValue": "beginner"},
+          "order": {"integerValue": "1"},
+          "isPublished": {"booleanValue": true},
+          "description": {"stringValue": "보행자 감지 후 즉각 제동 반응 훈련"},
+          "learningGoals": {"arrayValue": {"values": [{"stringValue": "반응속도 개선"}, {"stringValue": "안전거리 유지"}]}},
+          "guideProfile": {"stringValue": "beginner"}
+        }
+      }
+    },
+    {
+      "update": {
+        "name": "projects/drivease-2c384/databases/(default)/documents/scenarios/red-light-stop",
+        "fields": {
+          "scenarioId": {"stringValue": "red-light-stop"},
+          "name": {"stringValue": "신호등 정지"},
+          "difficulty": {"stringValue": "beginner"},
+          "order": {"integerValue": "2"},
+          "isPublished": {"booleanValue": true},
+          "description": {"stringValue": "정지선 타이밍 판단 능력 훈련"},
+          "learningGoals": {"arrayValue": {"values": [{"stringValue": "정지선 인식"}, {"stringValue": "감속 타이밍 연습"}]}},
+          "guideProfile": {"stringValue": "beginner"}
+        }
+      }
+    },
+    {
+      "update": {
+        "name": "projects/drivease-2c384/databases/(default)/documents/scenarios/narrow-alley",
+        "fields": {
+          "scenarioId": {"stringValue": "narrow-alley"},
+          "name": {"stringValue": "좁은 골목길"},
+          "difficulty": {"stringValue": "intermediate"},
+          "order": {"integerValue": "3"},
+          "isPublished": {"booleanValue": true},
+          "description": {"stringValue": "차체 공간감 훈련"},
+          "learningGoals": {"arrayValue": {"values": [{"stringValue": "차체 경계 판단"}, {"stringValue": "횡방향 여유거리 유지"}]}},
+          "guideProfile": {"stringValue": "intermediate"}
+        }
+      }
+    },
+    {
+      "update": {
+        "name": "projects/drivease-2c384/databases/(default)/documents/scenarios/reverse-parking",
+        "fields": {
+          "scenarioId": {"stringValue": "reverse-parking"},
+          "name": {"stringValue": "후진 주차"},
+          "difficulty": {"stringValue": "intermediate"},
+          "order": {"integerValue": "4"},
+          "isPublished": {"booleanValue": true},
+          "description": {"stringValue": "주차 시 시각 기준점 인식 + 거리 기반 오차 교정 훈련"},
+          "learningGoals": {"arrayValue": {"values": [{"stringValue": "차체 범위 시각화 활용"}, {"stringValue": "후진 전환 타이밍"}, {"stringValue": "주차 오차 감축"}]}},
+          "guideProfile": {"stringValue": "intermediate"}
+        }
+      }
+    },
+    {
+      "update": {
+        "name": "projects/drivease-2c384/databases/(default)/documents/scenarios/cut-in-vehicle",
+        "fields": {
+          "scenarioId": {"stringValue": "cut-in-vehicle"},
+          "name": {"stringValue": "끼어들기 차량"},
+          "difficulty": {"stringValue": "intermediate"},
+          "order": {"integerValue": "5"},
+          "isPublished": {"booleanValue": true},
+          "description": {"stringValue": "돌발 차선변경 대응 반응 훈련"},
+          "learningGoals": {"arrayValue": {"values": [{"stringValue": "주변 차량 감지"}, {"stringValue": "급제동 적절화"}]}},
+          "guideProfile": {"stringValue": "intermediate"}
+        }
+      }
+    },
+    {
+      "update": {
+        "name": "projects/drivease-2c384/databases/(default)/documents/scenarios/night-rain",
+        "fields": {
+          "scenarioId": {"stringValue": "night-rain"},
+          "name": {"stringValue": "야간/우천 주행"},
+          "difficulty": {"stringValue": "advanced"},
+          "order": {"integerValue": "6"},
+          "isPublished": {"booleanValue": true},
+          "description": {"stringValue": "가시성 저하 환경 적응 훈련"},
+          "learningGoals": {"arrayValue": {"values": [{"stringValue": "제한 시야 운전"}, {"stringValue": "속도 보수성 유지"}]}},
+          "guideProfile": {"stringValue": "advanced"}
+        }
+      }
+    },
+    {
+      "update": {
+        "name": "projects/drivease-2c384/databases/(default)/documents/scenarios/urban-peak",
+        "fields": {
+          "scenarioId": {"stringValue": "urban-peak"},
+          "name": {"stringValue": "도심 피크 혼잡 주행"},
+          "difficulty": {"stringValue": "intermediate"},
+          "order": {"integerValue": "7"},
+          "isPublished": {"booleanValue": true},
+          "description": {"stringValue": "저속 정체 구간에서 가속/감속 타이밍과 거리유지 훈련"},
+          "learningGoals": {"arrayValue": {"values": [{"stringValue": "급가속 억제"}, {"stringValue": "차간거리 균형 유지"}, {"stringValue": "정체 구간 스트레스 완화"}]}},
+          "guideProfile": {"stringValue": "intermediate"}
+        }
+      }
+    },
+    {
+      "update": {
+        "name": "projects/drivease-2c384/databases/(default)/documents/scenarios/blind-spot-lane-change",
+        "fields": {
+          "scenarioId": {"stringValue": "blind-spot-lane-change"},
+          "name": {"stringValue": "사각지대 차선변경"},
+          "difficulty": {"stringValue": "advanced"},
+          "order": {"integerValue": "8"},
+          "isPublished": {"booleanValue": true},
+          "description": {"stringValue": "사각지대 차량과의 간격을 판단해 충돌 위험을 줄이는 훈련"},
+          "learningGoals": {"arrayValue": {"values": [{"stringValue": "측면차량 조기탐지"}, {"stringValue": "차로변경 속도 제어"}, {"stringValue": "급격 조작 억제"}]}},
+          "guideProfile": {"stringValue": "advanced"}
+        }
+      }
+    },
+    {
+      "update": {
+        "name": "projects/drivease-2c384/databases/(default)/documents/scenarios/parking-angle-correction",
+        "fields": {
+          "scenarioId": {"stringValue": "parking-angle-correction"},
+          "name": {"stringValue": "후진 주차 각도 교정"},
+          "difficulty": {"stringValue": "intermediate"},
+          "order": {"integerValue": "9"},
+          "isPublished": {"booleanValue": true},
+          "description": {"stringValue": "자세 교정과 경로 예측으로 정확한 주차 각도를 맞추는 훈련"},
+          "learningGoals": {"arrayValue": {"values": [{"stringValue": "각도 오차 축소"}, {"stringValue": "진입 속도 조절"}, {"stringValue": "센서 입력 해석"}]}},
+          "guideProfile": {"stringValue": "intermediate"}
+        }
+      }
+    },
+    {
+      "update": {
+        "name": "projects/drivease-2c384/databases/(default)/documents/scenarios/stress-test-drives",
+        "fields": {
+          "scenarioId": {"stringValue": "stress-test-drives"},
+          "name": {"stringValue": "스트레스 반응 완화"},
+          "difficulty": {"stringValue": "advanced"},
+          "order": {"integerValue": "10"},
+          "isPublished": {"booleanValue": true},
+          "description": {"stringValue": "연속 경고와 급격한 도로환경이 주는 스트레스를 관리하는 훈련"},
+          "learningGoals": {"arrayValue": {"values": [{"stringValue": "분노/초조 반응 제어"}, {"stringValue": "안정 제동 제어"}, {"stringValue": "감정 조절 점수 향상"}]}},
+          "guideProfile": {"stringValue": "advanced"}
+        }
+      }
+    }
+  ]
+}

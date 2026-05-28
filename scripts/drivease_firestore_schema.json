@@ -1,0 +1,106 @@
+{
+  "project": "drivease-2c384",
+  "database": "(default)",
+  "collections": {
+    "appMetadata": {
+      "config": {
+        "appName": "string (readonly)",
+        "version": "string",
+        "projectAlias": "string",
+        "targetVehicle": "string",
+        "platform": "string",
+        "sensors": "string[]",
+        "isPilot": "boolean"
+      }
+    },
+    "guideProfiles": {
+      "beginner": {
+        "name": "string",
+        "level": "beginner | intermediate | advanced",
+        "handleTimingGuide": "boolean",
+        "bodyRangeVisualization": "boolean",
+        "reverseGuideText": "boolean",
+        "steeringAngleMeter": "boolean",
+        "distanceWarning": "string",
+        "notes": "string"
+      }
+    },
+    "scenarios": {
+      "unplanned-pedestrian": {
+        "scenarioId": "string",
+        "name": "string",
+        "difficulty": "string",
+        "order": "number",
+        "isPublished": "boolean",
+        "description": "string",
+        "learningGoals": "string[]",
+        "guideProfile": "string"
+      }
+    },
+    "users/{uid}": {
+      "profile": {
+        "nickname": "string",
+        "createdAt": "timestamp",
+        "updatedAt": "timestamp",
+        "privacyConsented": "boolean",
+        "settings": {
+          "gyroSensitivity": "low|medium|high",
+          "parkingAssistAuto": "boolean"
+        }
+      },
+      "sessions/{sessionId}": {
+        "userId": "string (uid)",
+        "scenarioId": "string",
+        "guideLevel": "string",
+        "vehicleType": "string",
+        "device": {
+          "platform": "ios|android",
+          "sensorSensitivity": "low|medium|high"
+        },
+        "startedAt": "timestamp",
+        "endedAt": "timestamp?",
+        "durationSec": "number",
+        "result": "completed|abandoned|fail|success",
+        "totalScore": "number",
+        "metrics": {
+          "collision": {
+            "pedestrian": "number",
+            "wall": "number",
+            "vehicle": "number"
+          },
+          "laneDeviationSec": "number",
+          "stoplineViolation": "number",
+          "reactionMs": "number",
+          "parkingErrorCm": "number?"
+        },
+        "feedback": {
+          "messages": "string[]",
+          "highlights": "string[]",
+          "scoreByCategory": {
+            "안전운전": "number",
+            "감정조절": "number",
+            "주차정확도": "number"
+          }
+        },
+        "createdAt": "timestamp",
+        "updatedAt": "timestamp"
+      },
+      "sessions/{sessionId}/events/{eventId}": {
+        "userId": "string",
+        "sessionId": "string",
+        "scenarioId": "string",
+        "t": "timestamp",
+        "type": "collision|lane|reaction|parking|feedback|state",
+        "data": "object",
+        "createdAt": "timestamp"
+      },
+      "feedback/{feedbackId}": {
+        "sessionId": "string",
+        "category": "collision|parking|reaction|general",
+        "message": "string",
+        "severity": "0|1|2",
+        "createdAt": "timestamp"
+      }
+    }
+  }
+}

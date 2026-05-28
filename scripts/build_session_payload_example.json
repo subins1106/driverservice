@@ -1,0 +1,41 @@
+{
+  "userId": "{{uid}}",
+  "scenarioId": "unplanned-pedestrian",
+  "guideLevel": "beginner",
+  "vehicleType": "compact-sedan",
+  "device": {
+    "platform": "ios",
+    "sensorSensitivity": "medium"
+  },
+  "startedAt": "{{timestamp}}",
+  "durationSec": 240,
+  "result": "completed",
+  "totalScore": 82,
+  "metrics": {
+    "collision": {
+      "pedestrian": 0,
+      "wall": 1,
+      "vehicle": 0
+    },
+    "laneDeviationSec": 3.8,
+    "stoplineViolation": 1,
+    "reactionMs": 870,
+    "parkingErrorCm": 12
+  },
+  "feedback": {
+    "messages": [
+      "보행자 감지 후 반응이 0.87초로 빠른 편입니다.",
+      "차선 중심 유지가 3.8초간 이탈되어 추가 연습이 필요합니다."
+    ],
+    "highlights": [
+      "안전운전 수치가 안정적으로 회복됨"
+    ],
+    "scoreByCategory": {
+      "안전운전": 84,
+      "감정조절": 78,
+      "주차정확도": 75
+    }
+  },
+  "createdAt": "{{timestamp}}",
+  "updatedAt": "{{timestamp}}"
+}
